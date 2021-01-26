@@ -36,3 +36,14 @@ Result 表：
 | 2         | 2017-06-25  |
 | 3         | 2016-03-02  |
 +-----------+-------------+
+
+
+
+SELECT player_id,
+       device_id,
+       min(event_date) AS event_date,
+       games_played
+FROM Activity
+GROUP BY 1,
+         2,
+         4
